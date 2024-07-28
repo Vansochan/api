@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Jwt.Sample.Domain\Jwt.Sample.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+        <HintPath>..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.7\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+        <HintPath>..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\8.0.7\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="SqlServer\Database\Scripts\Script00002- Create table partner.sql" />
+      <EmbeddedResource Include="SqlServer\Database\Scripts\Script00002- Create table partner.sql" />
+      <None Remove="SqlServer\Database\Scripts\Script000001- Create authorize schema.sql" />
+      <EmbeddedResource Include="SqlServer\Database\Scripts\Script000001- Create authorize schema.sql" />
+      <None Remove="SqlServer\Database\Scripts\Script00003- Add column role.sql" />
+      <EmbeddedResource Include="SqlServer\Database\Scripts\Script00003- Add column role.sql" />
+    </ItemGroup>
+
+</Project>

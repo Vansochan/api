@@ -1,0 +1,1 @@
+﻿alter table sso.Partners add [Role] nvarchar(max);
